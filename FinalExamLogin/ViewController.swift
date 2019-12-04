@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var testtext: UITextView!
     @IBOutlet weak var passwordtext: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

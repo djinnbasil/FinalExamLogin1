@@ -10,7 +10,7 @@ import UIKit
 import SQLite3
 
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
      var db: OpaquePointer?
     
@@ -23,6 +23,8 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordtext11: UITextField!
     
     @IBOutlet weak var usernametext: UITextField!
+    
+    var imagePicker: UIImagePickerController!
     
     @IBOutlet weak var biotext1: UITextField!
     override func viewDidLoad() {
@@ -56,7 +58,21 @@ class SignupViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func takephotobtn(_ sender: Any) {
+        
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imagePicker.dismiss(animated: true, completion: nil)
+        imageview1.image = info[.originalImage] as? UIImage
+    }
+    
     @IBAction func signupbtn1(_ sender: Any) {
         
         if(passwordtext1.text == passwordtext11.text){
