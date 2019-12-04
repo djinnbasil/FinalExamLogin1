@@ -28,7 +28,7 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            .appendingPathComponent("Finalexam1.sqlite")
+            .appendingPathComponent("Finalexam4.sqlite")
         
         //opening the database
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
@@ -64,7 +64,7 @@ class SignupViewController: UIViewController {
             
             let username = usernametext.text?.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailtext1.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = (passwordtext1.text?.trimmingCharacters(in: .whitespacesAndNewlines))!
+            let password = passwordtext1.text?.trimmingCharacters(in: .whitespacesAndNewlines)
             let bio = biotext1.text?.trimmingCharacters(in: .whitespacesAndNewlines)
            
             
@@ -117,7 +117,7 @@ class SignupViewController: UIViewController {
                 return
             }*/
             
-            if sqlite3_exec(db, "INSERT INTO Heroes (username,email,password,bio) VALUES('"+username!+"','"+email!+"','"+password+"','"+bio!+"');", nil, nil, nil) != SQLITE_OK {
+            if sqlite3_exec(db, "INSERT INTO Heroes (username,email,password,bio) VALUES('"+username!+"','"+email!+"','"+password!+"','"+bio!+"');", nil, nil, nil) != SQLITE_OK {
                 let errmsg = String(cString: sqlite3_errmsg(db)!)
                 print("error creating table: \(errmsg)")
             }
@@ -161,7 +161,7 @@ class SignupViewController: UIViewController {
             
           
             
-            biotext1.text = "User Saved!!"
+            biotext1.text = passwordtext1.text
             
          //performSegue(withIdentifier: "SignUptoLogin", sender: nil)
     }

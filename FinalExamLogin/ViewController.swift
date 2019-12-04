@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            .appendingPathComponent("Finalexam1.sqlite")
+            .appendingPathComponent("Finalexam4.sqlite")
         
         //opening the database
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
@@ -47,9 +47,9 @@ class ViewController: UIViewController {
         while(sqlite3_step(stmt) == SQLITE_ROW){
             let id = sqlite3_column_int(stmt, 0)
             let username = String(cString: sqlite3_column_text(stmt, 1))
-            let email = sqlite3_column_text(stmt, 2)
-            let password = sqlite3_column_text(stmt, 3)
-            let bio = sqlite3_column_text(stmt, 4)
+            let email = String(cString: sqlite3_column_text(stmt, 2))
+            let password = String(cString: sqlite3_column_text(stmt, 3))
+            let bio = String(cString: sqlite3_column_text(stmt, 4))
           
             
             heroList.append(User(id: Int(id), username: String(describing: username),
@@ -63,6 +63,7 @@ class ViewController: UIViewController {
            // testtext.text += String(heroList[0].bio!)
             
             testtext.text += String(heroList[count1].username!)
+            testtext.text += String(heroList[count1].password!)
             count1 = count1+1
             
 
@@ -86,11 +87,14 @@ class ViewController: UIViewController {
         
         for n in 0...heroList.count-1 {
             if(heroList[n].email == emailtext.text && heroList[n].password == passwordtext.text){
+                 performSegue(withIdentifier: "LogintoBio", sender: nil)
                 
-                performSegue(withIdentifier: "LogintoSignUp", sender: nil)
+                
                 
             }
         }
+        
+       
     }
     
     @IBAction func signupbtn(_ sender: Any) {

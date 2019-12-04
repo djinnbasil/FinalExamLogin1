@@ -10,13 +10,121 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FinalExamLogin/SignupViewController.swift"
-            timestampString = "597168160.5720249"
+            timestampString = "597171794.949885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "2"
             endingLineNumber = "2"
             landmarkName = "unknown"
             landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FinalExamLogin/ViewController.swift"
+            timestampString = "597171794.950061"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinalExamLogin.ViewController.heroList.getter : Swift.Array&lt;FinalExamLogin.User&gt;"
+                  moduleName = "FinalExamLogin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/FinalExamLogin/FinalExamLogin/ViewController.swift"
+                  timestampString = "597168830.086107"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinalExamLogin.ViewController.heroList.setter : Swift.Array&lt;FinalExamLogin.User&gt;"
+                  moduleName = "FinalExamLogin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/FinalExamLogin/FinalExamLogin/ViewController.swift"
+                  timestampString = "597168830.0883"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinalExamLogin.ViewController.heroList.modify : Swift.Array&lt;FinalExamLogin.User&gt;"
+                  moduleName = "FinalExamLogin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/FinalExamLogin/FinalExamLogin/ViewController.swift"
+                  timestampString = "597168830.0903749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinalExamLogin.ViewController.heroList.modify : Swift.Array&lt;FinalExamLogin.User&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "FinalExamLogin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/FinalExamLogin/FinalExamLogin/ViewController.swift"
+                  timestampString = "597168830.092437"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinalExamLogin.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; FinalExamLogin.ViewController"
+                  moduleName = "FinalExamLogin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/FinalExamLogin/FinalExamLogin/ViewController.swift"
+                  timestampString = "597168830.0945179"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "295">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FinalExamLogin.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;FinalExamLogin.ViewController&gt;"
+                  moduleName = "FinalExamLogin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Desktop/FinalExamLogin/FinalExamLogin/ViewController.swift"
+                  timestampString = "597168830.096553"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "215">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
