@@ -43,14 +43,14 @@ class ViewController: UIViewController {
             emailtext.text = errmsg
             return
         }
-        
+        var count1 = 0
         while(sqlite3_step(stmt) == SQLITE_ROW){
             let id = sqlite3_column_int(stmt, 0)
             let username = String(cString: sqlite3_column_text(stmt, 1))
-            let email = sqlite3_column_int(stmt, 2)
-            let password = sqlite3_column_int(stmt, 3)
-            let bio = sqlite3_column_int(stmt, 4)
-            testtext.text += String(heroList.count)
+            let email = sqlite3_column_text(stmt, 2)
+            let password = sqlite3_column_text(stmt, 3)
+            let bio = sqlite3_column_text(stmt, 4)
+          
             
             heroList.append(User(id: Int(id), username: String(describing: username),
                 email :String(describing: email),
@@ -62,6 +62,9 @@ class ViewController: UIViewController {
            // testtext.text += String(heroList[0].email!)
            // testtext.text += String(heroList[0].bio!)
             
+            testtext.text += String(heroList[count1].username!)
+            count1 = count1+1
+            
 
             
             
@@ -69,6 +72,7 @@ class ViewController: UIViewController {
             
             
         }
+        
         
      //   self.tableViewHeroes.reloadData()
     }
@@ -79,6 +83,14 @@ class ViewController: UIViewController {
 
     @IBAction func loginbtn(_ sender: Any) {
         readValues()
+        
+        for n in 0...heroList.count-1 {
+            if(heroList[n].email == emailtext.text && heroList[n].password == passwordtext.text){
+                
+                performSegue(withIdentifier: "LogintoSignUp", sender: nil)
+                
+            }
+        }
     }
     
     @IBAction func signupbtn(_ sender: Any) {
